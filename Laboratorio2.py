@@ -49,6 +49,20 @@ while loop :
     dev_appli=disp_appliance.json()
     #pprint.pprint(dev_wireless)
     #pprint.pprint(dev_appliance)
+<<<<<<< HEAD
+=======
+
+    #Creacion del archivo cvs
+    lista_dispositivos = open('devices.csv', 'w') 
+    with lista_dispositivos as csvfile:
+        fieldnames = ['name', 'model', 'mac', 'lanIp', 'serial']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(dev_wireless)
+        writer.writerows(dev_appliance)
+    print("archivo generado")
+    time.sleep (300)
+>>>>>>> 4246d31ac528c4819f8928090d300910dcd5709f
 
     #Creacion del archivo cvs
     lista_dispositivos = open('devices.csv', 'w') 
