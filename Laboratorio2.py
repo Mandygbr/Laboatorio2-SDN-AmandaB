@@ -3,7 +3,6 @@ import pprint
 import json
 
 
-
 url = "https://api.meraki.com/api/v1/organizations"
 
 payload = None
