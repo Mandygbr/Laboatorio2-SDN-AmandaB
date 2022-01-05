@@ -7,3 +7,6 @@ verifica el estado de la solicitud
 Crea el archivo .csv con las listas de dispositivos wireless y appliance
 hay que descatar que no se encontraron ningun dispositivo aplliance en la lista de  dispositivos de DELab
 
+
+El escript genera el archivo .csv con la lista de equipos tipo wireless y appliancce.
+Hay que destacar que no se encontraron equipos appliannce en la lista de equipos de DeLAb
