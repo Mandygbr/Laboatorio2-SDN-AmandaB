@@ -22,11 +22,11 @@ headers = {
 lista = requests.request('GET', url, headers=headers, data = payload)
 lista.raise_for_status()
 lista = lista.json()
-pprint.pprint(lista)
+#pprint.pprint(lista)
 
 while i < len(lista):
     organizaciones.append(lista[i]['name'])
-    print(organizaciones[i])
+    #print(organizaciones[i])
     i=i+1
 #listas de dispositivos wireless y appliance
 url2 = "https://api.meraki.com/api/v1/organizations/681155/devices?productTypes%5B%5D=wireless"
