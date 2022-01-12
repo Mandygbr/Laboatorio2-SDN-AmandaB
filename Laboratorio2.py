@@ -3,11 +3,7 @@ import pprint
 import json
 import csv
 import time
-
-
-
 url = "https://api.meraki.com/api/v1/organizations"
-
 payload = None
 i = 0
 k = 0
@@ -20,7 +16,6 @@ headers = {
     "Accept": "application/json",
     "X-Cisco-Meraki-API-Key": "6bec40cf957de430a6f1f2baa056b99a4fac9ea0"
 }
-
 #obtencion de las organizaciones 
 lista = requests.request('GET', url, headers=headers, data = payload)
 lista.raise_for_status()
@@ -49,9 +44,6 @@ while loop :
     dev_appli=disp_appliance.json()
     #pprint.pprint(dev_wireless)
     #pprint.pprint(dev_appliance)
-<<<<<<< HEAD
-=======
-
     #Creacion del archivo cvs
     lista_dispositivos = open('devices.csv', 'w') 
     with lista_dispositivos as csvfile:
@@ -60,19 +52,8 @@ while loop :
         writer.writeheader()
         writer.writerows(dev_wireless)
         writer.writerows(dev_appliance)
-    print("archivo generado")
-    time.sleep (300)
->>>>>>> 4246d31ac528c4819f8928090d300910dcd5709f
-
-    #Creacion del archivo cvs
-    lista_dispositivos = open('devices.csv', 'w') 
-    with lista_dispositivos as csvfile:
-        fieldnames = ['name', 'model', 'mac', 'lanIp', 'serial']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(dev_wireless)
-        writer.writerows(dev_appliance)
-    print("archivo generado")
+    print("archivo actualizado")
+    time.ctime()
     time.sleep (300)
 
 
